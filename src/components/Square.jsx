@@ -6,7 +6,11 @@ const Square = ({ value, onClick }) => {
   };
   return (
     <div className="square" onClick={onSquareClick}>
-      <h1>{value}</h1>
+      {value === "X" ? (
+        <span className="x">{value}</span>
+      ) : (
+        <span className="o">{value}</span>
+      )}
     </div>
   );
 };
